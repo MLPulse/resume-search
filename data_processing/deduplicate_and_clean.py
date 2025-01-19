@@ -91,5 +91,5 @@ def main(input_csv: str, output_csv: str):
     print(f"Saved cleaned data to: {output_csv}")
 
 # Example usage:
-if __name__ == "__main__":
-    main("jobs.csv", "cleaned_job_ads.csv")
+#if __name__ == "__main__":
+#    main("jobs.csv", "cleaned_job_ads.csv")
