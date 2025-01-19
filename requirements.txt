@@ -1,3 +1,10 @@
 # requirements.txt
 requests>=2.28.0
 python-dotenv>=0.19.2
+pdfplumber
+python-docx
+spacy
+
+# NOTE: After installing these packages, run the following command:
+#   python -m spacy download en_core_web_md
+# or whichever spaCy model you prefer (e.g. en_core_web_lg).

@@ -18,8 +18,10 @@ Thumbs.db
 # Ignore env files containing secrets
 .env
 
-# ignore csv files
+# ignore csv, pdf and docx files
 *.csv
+*.pdf
+*.docx
 
 # Ignore logs
 *.log
