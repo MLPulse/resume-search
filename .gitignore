@@ -14,3 +14,9 @@ Thumbs.db
 # IDE settings (optional)
 .vscode/
 .idea/
+
+# Ignore env files containing secrets
+.env
+
+# Ignore logs
+*.log
