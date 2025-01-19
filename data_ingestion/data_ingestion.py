@@ -4,6 +4,7 @@ import os
 import requests
 import logging
 import time
+import csv
 from typing import List, Dict, Any, Optional
 from dotenv import load_dotenv
 
@@ -199,9 +200,17 @@ def main():
 
     # Combine results
     combined_jobs = adzuna_jobs + jooble_jobs
-    print(f"Total combined job postings: {len(combined_jobs)}")
-    if combined_jobs:
-        print("Sample job:", combined_jobs[0])
+    logging.info(f"Combined total jobs: {len(combined_jobs)}")
+
+    # Write to CSV
+    fieldnames = ["title", "company", "location", "description", "url", "source"]
+    with open("jobs.csv", mode="w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for job in combined_jobs:
+            writer.writerow(job)
+
+    print(f"CSV file 'jobs.csv' written with {len(combined_jobs)} rows.")
 
 if __name__ == "__main__":
     main()
