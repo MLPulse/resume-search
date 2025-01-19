@@ -4,7 +4,13 @@ python-dotenv>=0.19.2
 pdfplumber
 python-docx
 spacy
+scikit-learn>=1.0
+transformers>=4.0.0
+torch>=1.7.0
 
-# NOTE: After installing these packages, run the following command:
+# NOTE: After installing these packages, run one of the following (or a similar spaCy model):
+#   python -m spacy download en_core_web_sm
 #   python -m spacy download en_core_web_md
-# or whichever spaCy model you prefer (e.g. en_core_web_lg).
+#   python -m spacy download en_core_web_lg
+#
+# (depending on which model you prefer.)
